@@ -41,12 +41,12 @@ def novo_usuario(usuario):
         print("\n Já existe um usuário com esse CPF!")
         return
 
-    print("==========================================")    
+    print("==========================================")
     print("Criando usuário, insira as informações: ")
     nome = input("Nome Completo: ")
     data_nascimento = input("Informe a data de nascimento (DD-MM-AAAA): ")
     endereco = input(
-        "Informe o endereço (logradouro, nro - bairro - cidade/sigla estado): "
+        "Informe o endereço: "
     )
 
     usuario.append({"nome": nome,
@@ -134,7 +134,7 @@ def main():
             valor = float(input("Informe o valor do depósito: R$ "))
             saldo, extrato = depositar(saldo, valor, extrato)
 
-        elif opcao == "2":            
+        elif opcao == "2":
             valor = float(input("Informe o valor do saque: R$ "))
             saldo, extrato = sacar(
                 saldo=saldo,
@@ -150,7 +150,7 @@ def main():
             mostrar_extrato(saldo, extrato=extrato)
 
         elif opcao == "4":
-            novo_usuario(usuario) 
+            novo_usuario(usuario)
 
         elif opcao == "5":
             numero_conta = len(contas) + 1
