@@ -7,7 +7,6 @@ from sqlalchemy import pool
 
 from alembic import context
 from workout_api.contrib.models import BaseModel
-from workout_api.contrib.repository.models import *
 
 config = context.config
 
