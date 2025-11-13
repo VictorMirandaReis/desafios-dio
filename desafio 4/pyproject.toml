@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "dio-bank-package"
+version = "0.1.0"
+description = ""
+authors = ["EDUARDO DA SILVA FERREIRA <eduardo.s.ferreira@gmail.com>"]
+readme = "README.md"
+package-mode = false  # Adicione esta linha
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "*"
+uvicorn = { extras = ["standard"], version = "^0.34.0" }
+databases = {version = "*", extras = ["aiosqlite", "asyncpg"]}
+pyjwt = "*"
+psycopg2-binary = "*"
+pydantic = "*"
+pydantic-settings = "*"
+alembic = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+pytest-mock = "*"
+flake8 = "*"
+mypy = "*"
+ipython = "*"
+isort = "*"
+black = "*"
+autopep8 = "*"
+pylint = "*"
+pytest-asyncio = "*"
+pre-commit = "*"
+bandit = "*"
+httpx = "*"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint]
+max-line-length = 240
