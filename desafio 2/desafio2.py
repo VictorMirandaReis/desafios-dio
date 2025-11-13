@@ -205,7 +205,6 @@ def recuperar_conta_cliente(cliente):
         print("\n Cliente não possui conta! ")
         return
 
-    # FIXME: não permite cliente escolher a conta
     return cliente.contas[0]
 
 
@@ -284,7 +283,7 @@ def novo_usuario(usuario):
     data_nascimento = input("Informe a data de nascimento (dd-mm-aaaa): ")
     endereco = input(
         "Informe o endereço: "
-        )
+    )
 
     cliente = PessoaFisica(
         nome=nome, data_nascimento=data_nascimento, cpf=cpf, endereco=endereco)
@@ -349,7 +348,7 @@ def main():
         else:
             print(
                 "\n Algo deu errado. Selecione a opção novamente."
-                )
+            )
 
 
 main()
